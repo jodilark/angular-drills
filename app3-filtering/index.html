@@ -1,9 +1,31 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<html ng-app="app">
+
+<body ng-controller="coolController">
+ {{totsBrokenController}}
+{{brokenService}}
+
+
+<input type="text" ng-model="filterMe">
+
+
+
+
+
+<div ng-repeat="joker in theseGuys | filter: filterMe">
+	{{joker.name}}
+	<ul>
+		<li>{{joker.email}}</li>
+		<li>{{joker.dateEmployed}}</li>
+		<li>{{joker.phone}}</li>
+	</ul>
+</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+
 </html>
