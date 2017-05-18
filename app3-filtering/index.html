@@ -1,6 +1,24 @@
-<html>
-	<body>
-		Something
+<html ng-app="immaApp">
+	<body ng-controller="immaController">
+		{{onlyControllerB}}
+		{{onlyServiceB}}
+
+<input type="text" ng-model="filterData">
+
+<div ng-repeat="data in allTheData | filter: filterData">
+	<p>{{data.name}}</p>
+<p>	{{data.email}}</p>
+<p>	{{data.dateEmployed}}</p>
+<p>	{{data.phone}}</p>
+</div>
+
+
+
+
+
+
+
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

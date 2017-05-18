@@ -1,8 +1,23 @@
-<html ng-app="arrayApp">
+<html ng-app="nameofApp">
 	<head>
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
-	<body ng-controller="arrayController">
+	<body ng-controller="nameOfController">
+
+
+{{brokenController}}
+
+		{{brokenService}}
+
+
+
+		<div ng-repeat="theObject in objects">
+			{{theObject.name}}
+			<p>{{theObject.email}}</p>
+			<p>{{theObject.dateEmployed}}</p>
+			<p>{{theObject.phone}}</p>
+			<br>
+		</div>
 	
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>

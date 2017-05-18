@@ -104,7 +104,20 @@ var myData = [
 
 
 
+angular.module("nameofApp").service("nameOfService", function(){
 
+
+this.brokenService = "working service"
+
+this.objects = function (){
+	return myData
+}
+
+
+
+
+    
+})
 
 
 
